@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Récupère la taille du texte
-    SDL_FRect dstRect = {100, 14, texteSurface->w, texteSurface->h};
+    SDL_FRect dstRect = {50, 50, texteSurface->w, texteSurface->h};
 
     // Affichage
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // fond noir
@@ -78,20 +78,7 @@ int main(int argc, char* argv[]) {
     SDL_RenderPresent(renderer);
 
     SDL_SetWindowPosition(window, 50, 70); // Gère la position de ma fenêtre
-
-    SDL_Event event;
-    int running = 1;
-
-    while (running) {
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_EVENT_QUIT) {
-                running = 0;
-            }
-        }
-
-        // On peut aussi redessiner ici si besoin
-        SDL_Delay(16);  // ~60 FPS, pour limiter la charge CPU
-    }
+    SDL_Delay(3000); // Ajoute un délai avant la fermeture de la fenêtre
 
     status = SDL_APP_SUCCESS;
 
