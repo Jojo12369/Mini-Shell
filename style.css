@@ -31,7 +31,7 @@
 
 /* Style du champ d'entrée */
 #entry {
-    caret-color: #ffffff; /* Curseur blanc */
+    caret-color: #a078d4;
     box-shadow: none;
     outline: none;
     min-height: 0;
@@ -42,4 +42,10 @@
     border: none;
     box-shadow: none;
     outline: none;
+}
+
+/* Change la couleur lors d'une selection de texte */
+#entry selection {
+    background-color: #a078d4;
+    color: #272727;
 }

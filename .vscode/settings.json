@@ -10,6 +10,7 @@
     "MSYSTEM": "UCRT64"
   },
   "files.associations": {
-    "gtk.h": "c"
+    "gtk.h": "c",
+    "all_headers.h": "c"
   }
 }
