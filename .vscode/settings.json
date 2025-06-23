@@ -3,7 +3,7 @@
   "terminal.integrated.profiles.windows": {
     "MSYS2 UCRT64": {
       "path": "C:\\msys64\\usr\\bin\\bash.exe",
-      "args": ["--login", "-i"]
+      "args": ["--login", "-i", "-c", "cd '/c/Users/jorda/Documents/GitHub/C/Mini Shell'; exec bash"]
     }
   },
   "terminal.integrated.env.windows": {
@@ -12,5 +12,5 @@
   "files.associations": {
     "gtk.h": "c",
     "all_headers.h": "c"
-  }
+  },
 }
