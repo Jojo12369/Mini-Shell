@@ -8,6 +8,8 @@ on_scroll(GtkEventControllerScroll *controller,
           double scroll_dx,
           double scroll_dy,
           gpointer user_data) {
+    (void)controller;
+    (void)scroll_dx;
     GtkWidget *scrolled_window = GTK_WIDGET(user_data);
     GtkWidget *child = gtk_scrolled_window_get_child(GTK_SCROLLED_WINDOW(scrolled_window));
 
