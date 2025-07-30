@@ -11,6 +11,7 @@
   },
   "files.associations": {
     "gtk.h": "c",
-    "all_headers.h": "c"
+    "all_headers.h": "c",
+    "terminal.h": "c"
   },
 }

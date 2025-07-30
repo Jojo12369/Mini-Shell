@@ -20,13 +20,14 @@
     font-size: 14px;
     font-weight: bold;
     border: none;
-    margin: 0;
+    margin: 0 0 2px 0;
     padding: 0;
 }
 
 /* Style de mon "prompt-label" */
 #prompt-label {
     color: #a078d4;
+    margin-right: 8px;
 }
 
 /* Style du champ d'entrée */

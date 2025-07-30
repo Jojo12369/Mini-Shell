@@ -6,7 +6,7 @@ void app_activate(GApplication *app, gpointer user_data) {
 
     GtkWidget *window = gtk_application_window_new(GTK_APPLICATION(app));
     gtk_window_set_title(GTK_WINDOW(window), "Mini Shell");             // Nom de la fenêtre
-    gtk_window_set_default_size(GTK_WINDOW(window), 700, 450);          // Taille de la fenêtre
+    gtk_window_set_default_size(GTK_WINDOW(window), 700, 445);          // Taille de la fenêtre
     gtk_window_set_icon_name(GTK_WINDOW(window), "utilities-terminal"); // Icon de la fenêtre
     gtk_window_present(GTK_WINDOW(window));                             // Affiche la fenêtre au premier plan
     gtk_window_set_resizable(GTK_WINDOW(window), FALSE);                // Empèche le redimensionnement
