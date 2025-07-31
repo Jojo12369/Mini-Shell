@@ -3,4 +3,3 @@
 
 # === Visual Studio Code ===
 .vscode/        # Paramètres utilisateur locaux de l'éditeur
-.gitignore
