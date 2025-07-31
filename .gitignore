@@ -1,5 +1,0 @@
-# === Fichiers binaires compilés ===
-*.exe           # Fichiers exécutables Windows
-
-# === Visual Studio Code ===
-.vscode/        # Paramètres utilisateur locaux de l'éditeur
