@@ -1,5 +1,6 @@
 #include "../headers/prompt_label.h"
 #include "../headers/fonctionnalites_prompt.h"
+#include "../headers/infos.h"
 
 static gboolean grab_focus_idle(gpointer user_data);
 
@@ -7,6 +8,17 @@ static gboolean grab_focus_idle(gpointer user_data);
 void creation_gtkentry(GtkWidget *vbox) {
     // Crée une box horizontale pour une ligne
     GtkWidget *hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    GtkWidget *hbox2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+
+    // Création du label "hostname"
+    GtkWidget *hostname = gtk_label_new(infos());
+    gtk_widget_set_name(hostname, "hostname");
+    gtk_label_set_xalign(GTK_LABEL(hostname), 0.0);
+
+    // Création d'un label "path"
+    GtkWidget *path = gtk_label_new(path_pc());
+    gtk_widget_set_name(path, "path");
+    gtk_label_set_xalign(GTK_LABEL(path), 0.0);
 
     // Création du label "$>"
     GtkWidget *prompt_label = gtk_label_new("$>");
@@ -19,11 +31,15 @@ void creation_gtkentry(GtkWidget *vbox) {
     gtk_entry_set_max_length(GTK_ENTRY(entry), 82);
 
     // Ajout du label et de l'entrée dans la hbox (ligne)
-    gtk_box_append(GTK_BOX(hbox), prompt_label);
-    gtk_box_append(GTK_BOX(hbox), entry);
+    gtk_box_append(GTK_BOX(hbox), hostname);
+    gtk_box_append(GTK_BOX(hbox), path);
+
+    gtk_box_append(GTK_BOX(hbox2), prompt_label);
+    gtk_box_append(GTK_BOX(hbox2), entry);
 
     // Ajout de la hbox (ligne) dans la vbox (terminal)
     gtk_box_append(GTK_BOX(vbox), hbox);
+    gtk_box_append(GTK_BOX(vbox), hbox2);
 
     // Connexion du signal "activate" sur l'entrée, avec comme user_data la vbox (terminal)
     g_signal_connect(entry, "activate", G_CALLBACK(validation), vbox);

@@ -15,7 +15,8 @@ SRCS = main.c \
 	   $(SRC_DIR)/scroll.c \
 	   $(SRC_DIR)/promp_label.c \
 	   $(SRC_DIR)/fonctionnalites_prompt.c \
-	   $(SRC_DIR)/defilement_auto.c
+	   $(SRC_DIR)/defilement_auto.c \
+	   $(SRC_DIR)/infos.c
 
 # Détection des flags GTK4 via pkg-config
 GTK_FLAGS = `pkg-config --cflags --libs gtk4`
@@ -23,9 +24,12 @@ GTK_FLAGS = `pkg-config --cflags --libs gtk4`
 # Options du compilateur
 CFLAGS = -I$(INC_DIR) -Wall -Wextra -g
 
+# Gestion du nom de l'ordinateur
+HOSTNAME = -lws2_32
+
 # Compilation
 $(TARGET): $(SRCS)
-	gcc $(CFLAGS) $(SRCS) -o $(TARGET) $(GTK_FLAGS)
+	gcc $(CFLAGS) $(SRCS) -o $(TARGET) $(GTK_FLAGS) $(HOSTNAME)
 	@echo "Compilation terminée : $(TARGET)"
 
 run: minishell.exe

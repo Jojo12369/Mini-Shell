@@ -12,6 +12,11 @@ void validation(GtkEntry *entry, gpointer user_data) {
     gtk_editable_set_editable(GTK_EDITABLE(entry), FALSE);
     gtk_widget_set_can_focus(GTK_WIDGET(entry), FALSE);
 
+    // Création du label " "
+    GtkWidget *espace = gtk_label_new(" ");
+    gtk_widget_set_name(espace, "espace");
+    gtk_box_append(GTK_BOX(vbox), espace);
+
     creation_gtkentry(vbox);
 
     GtkWidget *scrolled_window = gtk_widget_get_ancestor(vbox, GTK_TYPE_SCROLLED_WINDOW);

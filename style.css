@@ -39,7 +39,7 @@ scrollbar slider:hover {
 }
 
 /* Style de base pour mes éléments */
-#info-label, #prompt-label, #entry {
+#info-label, #hostname, #path, #prompt-label, #entry {
     background-color: transparent;
     color: #ffffff;
     font-family: "Ubuntu Mono", "Fira Code", "Consolas", monospace;
@@ -48,6 +48,18 @@ scrollbar slider:hover {
     border: none;
     margin: 0 0 2px 0;
     padding: 0;
+}
+
+/* Style de chemin relatif du terminal */
+#path {
+    color: #a078d4;
+}
+
+/* Style de mon "hostname */
+#hostname {
+    color: white;
+    margin-right: 5px;
+    padding: 1px;
 }
 
 /* Style de mon "prompt-label" */
@@ -62,6 +74,11 @@ scrollbar slider:hover {
     box-shadow: none;
     outline: none;
     min-height: 0;
+}
+
+/* Style de l'espace */
+#espace {
+    padding: 1px;
 }
 
 /* Supprimer les bordures et focus visuels */
